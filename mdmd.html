@@ -14,6 +14,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
       <!--font-awesome-for-icons-->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+       <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
    </head>
  <body>
 
@@ -164,6 +166,140 @@
          </div><!--container-end-->
       </div>
    </section><!--story-end-->
+
+   <!--Our-services-->
+   <section id="our-services">
+
+      <!--heading-->
+      <div class="services-heading">
+         <!--text-->
+         <div class="services-heading-text">
+            <strong>Serviciile Noastre</strong>
+            <h2>Servicii de calitate inalta</h2>
+         </div>
+         <!--btns-->
+         <div class="services-slide-btns">
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+         </div>
+      </div>
+      
+      <!--box-container-->
+      <div class="services-box-container">
+
+ <!-- Swiper -->
+  <div class="swiper mySwiperservices">
+    <div class="swiper-wrapper">
+            
+      <!--slide-1-->
+      <div class="swiper-slide">
+             <!--box-->
+         <div class="service-box s-box1">
+            <!--icon-->
+            <i class="fa-solid fa-heart-pulse"></i>
+            <!--title-->
+            <strong>Siguranta de sanatate</strong>
+            <!--details-->
+            <p>Prioritizăm grija pentru sănătatea ta prin servicii sigure.</p>
+            <!--btn-->
+            <a href="#">Mai mult</a>
+         </div>
+      </div>
+
+
+        <!--slide-2-->
+      <div class="swiper-slide">
+             <!--box-->
+         <div class="service-box s-box2">
+            <!--icon-->
+            <i class="fa-solid fa-tooth"></i>
+            <!--title-->
+            <strong>Siguranta dentala</strong>
+            <!--details-->
+            <p>Asigurăm tratamente stomatologice sigure, moderne și fără durere.</p>
+            <!--btn-->
+            <a href="#">Mai mult</a>
+         </div>
+      </div>
+
+    <!--slide-3-->
+      <div class="swiper-slide">
+             <!--box-->
+         <div class="service-box s-box3">
+            <!--icon-->
+            <i class="fa-solid fa-eye"></i>
+            <!--title-->
+            <strong>Siguranta ochilor</strong>
+            <!--details-->
+            <p>Protejăm sănătatea vederii prin controale și tehnologii precise.</p>
+            <!--btn-->
+            <a href="#">Mai mult</a>
+         </div>
+      </div>
+
+            
+    <!--slide-4-->
+      <div class="swiper-slide">
+             <!--box-->
+         <div class="service-box s-box4">
+            <!--icon-->
+            <i class="fa-solid fa-face-smile"></i>
+            <!--title-->
+            <strong>Siguranta de piele</strong>
+            <!--details-->
+            <p>Oferim diagnostic și îngrijire dermatologică pentru o piele sănătoasă.</p>
+            <!--btn-->
+            <a href="#">Mai mult</a>
+              </div>
+            
+            </div><!--slider-end-->
+    </div><!--wrapper-end-->
+  </div><!--swiper-end-->
+
+</div><!--container-end-->
+
+<!--btn-->
+<span class="service-help-btn">Contacteazane <a href="#">Sa incepem!</a></span>
+
+
+   </section><!--service-end-->
+
+   
+
+
+   <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+   /*--services-slider--*/
+    var swiper = new Swiper(".mySwiperservices", {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 4,
+          spaceBetween: 40,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+      },
+    });
+  </script>
 
  </body>
  </html>
