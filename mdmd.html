@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!---Titlu-->
-    <title>Centrul de diagnostica Italian</title>
+    <title>Avem Grija</title>
     <link rel="stylesheet" href="styleforhome.css">
     <!--Icon-->
     <link rel="shortcut icon" href="imagini/fav-icon.png">
@@ -27,13 +27,18 @@
 
    <!--NAV-->
       <nav class="navigation">
+         <!--menu-btn-->
+         <input type="checkbox" class="menu-btn" id="menu-btn"> 
+         <label for="menu-btn" class="menu-icon">
+            <span class="nav-icon"></span>
+         </label>
       <!--logo-->
       <a href="#" class="logo"><span>Avem</span>Grija</a>
       <!--menu-->
       <ul class="menu">
-      <li><a href="#">Gaseste un Doctor</a></li>
-      <li><a href="#">Serviciile noastre</a></li>
-      <li><a href="#">Recenzii</a></li>
+      <li><a href="#team">Gaseste un Doctor</a></li>
+      <li><a href="#our-services">Serviciile noastre</a></li>
+      <li><a href="#testimonials">Recenzii</a></li>
    </ul>
    <!--Appointment-btn-->
    <a href="#" class="nav-appointment-btn">Inscriere</a>
@@ -522,17 +527,89 @@
             </div><!--box-end-->
             </div><!--slide-end-->
             
-         
                      </div><!--wrapper-end-->
                   <div class="swiper-pagination"></div>
                </div><!--swiper-end-->
          </div><!--container-end-->
          
        </div><!--content-end-->
-       
-
+      
    </section>
 
+   <!--subscribe-->
+
+   <section id="subscribe">
+      <h3>Follow pentru informatie de la AvemGrija</h3>
+      <!--subscribe-box-->
+      <form class="subscribe-box">
+         <input type="email" placeholder="avemgrija@gmail.com">
+         <button>Follow</button>
+      </form>
+   </section><!--end-->
+
+
+<!--footer-->
+<footer>
+   <div class="footer-container">
+
+         <!--company-box-->
+         <div class="footer-company-box">
+            <!--logo-->
+            <a href="#" class="logo"><span>Avem</span>Grija</a>
+            <!--details-->
+            <p>AvemGrijă oferă servicii medicale moderne, sigure, personalizate, cu grijă și profesionalism.</p>
+         <!--social-box-->
+         <div class="footer-social">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+         </div>
+         </div><!--company-box-end-->
+
+         <!--link-->
+         <div class="footer-link-box">
+            <strong>Principalul</strong>
+            <ul>
+               <li><a href="#">Home</a></li>
+               <li><a href="#">Despre</a></li>
+               <li><a href="#">Contacte</a></li>
+               <li><a href="#">Servicii</a></li>
+               <li><a href="#">Portofoliu</a></li>
+            </ul>
+         </div>
+           <!--link-->
+         <div class="footer-link-box">
+            <strong>Principalul</strong>
+            <ul>
+               <li><a href="#">Home</a></li>
+               <li><a href="#">Despre</a></li>
+               <li><a href="#">Contacte</a></li>
+               <li><a href="#">Servicii</a></li>
+               <li><a href="#">Portofoliu</a></li>
+            </ul>
+         </div>
+           <!--link-->
+         <div class="footer-link-box">
+            <strong>Principalul</strong>
+            <ul>
+               <li><a href="#">Home</a></li>
+               <li><a href="#">Despre</a></li>
+               <li><a href="#">Contacte</a></li>
+               <li><a href="#">Servicii</a></li>
+               <li><a href="#">Portofoliu</a></li>
+            </ul>
+         </div>
+
+
+
+   </div><!--container-end-->
+   <div class="footer-bottom">
+      <span>Made By whyalohadance</span>
+      <span>- 2025</span>
+   </div>
+
+</footer>
 
    <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -552,12 +629,8 @@
         prevEl: ".swiper-button-prev",
       },
       breakpoints: {
-        640: {
+        700: {
           slidesPerView: 2,
-          spaceBetween: 20,
-        },
-        768: {
-          slidesPerView: 4,
           spaceBetween: 40,
         },
         1024: {
@@ -576,15 +649,15 @@
         clickable: true,
       },
       breakpoints: {
-        640: {
+        560: {
           slidesPerView: 2,
           spaceBetween: 20,
         },
-        768: {
-          slidesPerView: 4,
+        950: {
+          slidesPerView: 3,
           spaceBetween: 40,
         },
-        1024: {
+        1250: {
           slidesPerView: 4,
           spaceBetween: 50,
         },
