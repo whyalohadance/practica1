@@ -1045,6 +1045,38 @@ footer{
     display: none;
 
 }
+
+#appointment-form {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+}
+
+.appointment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.appointment-form input,
+.appointment-form select,
+.appointment-form button {
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.appointment-form button {
+  background-color: #2c82f8;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.appointment-form button:hover {
+  background-color: #2166d8;
+}
 @media(max-width:1050px){
     .hero-content{
         display: flex;
