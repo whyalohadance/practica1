@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const pool = require('./db'); // подключаем базу
 
 const app = express();
 const PORT = 5000;
@@ -8,19 +9,30 @@ const PORT = 5000;
 app.use(cors());
 app.use(express.json());
 
-// Простой тестовый маршрут
-app.get('/', (req, res) => {
-  res.send('Backend merge!');
+// Приём формы записи
+app.post('/api/appointment', async (req, res) => {
+  try {
+    const { firstName, lastName, phone, email, procedure, address } = req.body;
+
+    await pool.query(
+      `INSERT INTO appointments (first_name, last_name, phone, email, procedure, address)
+       VALUES ($1, $2, $3, $4, $5, $6)`,
+      [firstName, lastName, phone, email, procedure, address]
+    );
+
+    res.status(200).json({ message: 'Datele au fost trimise cu succes!' });
+  } catch (error) {
+    console.error('Eroare la salvare în DB:', error);
+    res.status(500).json({ message: 'Eroare la trimitere în baza de date!' });
+  }
 });
 
-// Приём формы записи
-app.post('/api/appointment', (req, res) => {
-  const data = req.body;
-  console.log('Принятые данные:', data);
-  res.status(200).json({ message: 'Заявка получена!' });
+// Тестовый маршрут
+app.get('/', (req, res) => {
+  res.send('Backend merge cu PostgreSQL!');
 });
 
 // Запуск сервера
 app.listen(PORT, () => {
-  console.log(`Backend работает на http://localhost:${PORT}`);
+  console.log(`✅ Backend работает на http://localhost:${PORT}`);
 });

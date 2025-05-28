@@ -1046,32 +1046,60 @@ footer{
 
 }
 
-#appointment-form {
+/* Контейнер формы */
+.appointment-form-container {
   max-width: 600px;
-  margin: auto;
+  margin: 50px auto;
+  padding: 20px;
   text-align: center;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Заголовок */
+.appointment-form-container h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #2c82f8;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Форма */
 .appointment-form {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
 
+/* Поля ввода */
 .appointment-form input,
-.appointment-form select,
-.appointment-form button {
-  padding: 10px 15px;
+.appointment-form select {
+  padding: 12px 15px;
   border-radius: 5px;
   border: 1px solid #ccc;
   font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  outline: none;
+  transition: border-color 0.3s ease;
 }
 
+.appointment-form input:focus,
+.appointment-form select:focus {
+  border-color: #2c82f8;
+}
+
+/* Кнопка */
 .appointment-form button {
+  padding: 12px 15px;
+  border-radius: 5px;
   background-color: #2c82f8;
   color: white;
   border: none;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .appointment-form button:hover {
