@@ -1105,6 +1105,7 @@ footer{
 .appointment-form button:hover {
   background-color: #2166d8;
 }
+
 @media(max-width:1050px){
     .hero-content{
         display: flex;
